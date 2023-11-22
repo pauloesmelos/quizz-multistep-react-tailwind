@@ -1,5 +1,6 @@
 import React from 'react';
 import ButtonReset from '../ButtonReset/ButtonReset';
+import Header from '../Header/Header';
 
 const Results = ({ perguntas, value }) => {
   const count = () => {
@@ -10,8 +11,10 @@ const Results = ({ perguntas, value }) => {
         questoesErradas: fails
     };
   };
+
   return (
     <section className="p-5 pt-24 sm:pt-0">
+        <Header title="Quizz - Resultados" description="Resultados quizz geografia ou computação" />
         <div className="flex justify-between items-center">
             <span className="text-xl">
                 Acertos: {count().acertos} de {perguntas.length}

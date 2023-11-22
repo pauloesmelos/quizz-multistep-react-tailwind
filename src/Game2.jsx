@@ -1,7 +1,7 @@
 import React from 'react';
+import { GlobalContextSlide } from './components/GlobalContext/GlobalContextSlide';
 import Radio from './components/Input/Radio';
 import Results from './components/Results/Results';
-import { GlobalContextSlide } from './components/GlobalContext/GlobalContextSlide';
 const perguntas = [
     {
       pergunta: 'Qual a capital de Tocatins ?',
@@ -57,6 +57,7 @@ const Game2 = () => {
             question={pergunta}
             value={resp}
             setValue={setResp}
+            num={indice}
             />
             :
             <div key={indice}></div>

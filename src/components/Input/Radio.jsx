@@ -1,8 +1,10 @@
 import React from 'react';
 import { IoArrowBack } from 'react-icons/io5';
 import { GlobalContextSlide } from '../GlobalContext/GlobalContextSlide';
+import Header from '../Header/Header';
 
-const Radio = ({ question, value, setValue }) => {
+const Radio = ({ question, value, setValue, num }) => {
+
   const { id, pergunta, options } = question;
   const { slideActive, prevSlide } = React.useContext(GlobalContextSlide);
   const handleChange = ({ target }) => {
@@ -12,6 +14,7 @@ const Radio = ({ question, value, setValue }) => {
   }
   return (
     <div className="w-[50%] shadow-lg bg-white p-10 rounded-lg">
+      <Header title={`Quizz - Questão ${num + 1}`} description="Quizz site geografia computação questões" />
        <div>
         {
           slideActive > 0 ?
