@@ -11,7 +11,7 @@ const Results = ({ perguntas, value }) => {
     };
   };
   return (
-    <section>
+    <section className="p-5 pt-24 sm:pt-0">
         <div className="flex justify-between items-center">
             <span className="text-xl">
                 Acertos: {count().acertos} de {perguntas.length}
